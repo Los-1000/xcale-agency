@@ -1,0 +1,334 @@
+<!-- Automatización & Diagnóstico - Detalle -->
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Automatización y Diagnóstico de Procesos - Xcale Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#272a2c",
+                    "surface-container-lowest": "#0b0f10",
+                    "inverse-primary": "#006397",
+                    "on-tertiary": "#472a00",
+                    "primary": "#92ccff",
+                    "on-background": "#e0e3e5",
+                    "tertiary": "#ffb962",
+                    "surface-container": "#1d2022",
+                    "on-secondary-container": "#a8b6ca",
+                    "on-primary-fixed": "#001d31",
+                    "on-secondary-fixed-variant": "#3a4859",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#2b1700",
+                    "on-tertiary-container": "#3e2400",
+                    "on-secondary-fixed": "#0f1c2c",
+                    "on-secondary": "#243141",
+                    "tertiary-fixed": "#ffddb9",
+                    "secondary-fixed-dim": "#bac8dc",
+                    "secondary-fixed": "#d6e4f9",
+                    "outline": "#8a919b",
+                    "tertiary-container": "#c68222",
+                    "surface-variant": "#323537",
+                    "inverse-on-surface": "#2d3133",
+                    "secondary-container": "#3a4859",
+                    "on-primary-fixed-variant": "#004b73",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e0e3e5",
+                    "primary-fixed-dim": "#92ccff",
+                    "primary-fixed": "#cce5ff",
+                    "on-primary": "#003351",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#92ccff",
+                    "surface-container-low": "#191c1e",
+                    "background": "#101415",
+                    "surface-container-highest": "#323537",
+                    "secondary": "#bac8dc",
+                    "surface-dim": "#101415",
+                    "on-primary-container": "#00060e",
+                    "surface-bright": "#363a3b",
+                    "tertiary-fixed-dim": "#ffb962",
+                    "on-tertiary-fixed-variant": "#663e00",
+                    "primary-container": "#1e7db8",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e0e3e5",
+                    "outline-variant": "#404850",
+                    "surface": "#101415",
+                    "on-surface-variant": "#c0c7d1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #0A0F1E; }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .tech-gradient-text {
+            background: linear-gradient(135deg, #92ccff 0%, #1e7db8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            position: relative;
+        }
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #1e7db8, transparent, #92ccff);
+            z-index: -1;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glow-effect:hover::before {
+            opacity: 0.5;
+        }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+            @keyframes xcMenuSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes xcMenuFade { from { opacity: 0; } to { opacity: 1; } }
+        #mobile-menu:not(.hidden) > div:last-child { animation: xcMenuSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1); }
+        #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
+    </style>
+</head>
+<body class="text-on-background antialiased selection:bg-primary-container selection:text-white flex flex-col min-h-screen grid-bg relative">
+<!-- Ambient Glows -->
+<div class="fixed top-0 left-0 w-[800px] h-[800px] bg-primary-container/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+<div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-inverse-primary/10 rounded-full blur-[100px] pointer-events-none translate-x-1/3 translate-y-1/3"></div>
+<!-- TopNavBar -->
+<header class="bg-background/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/10 shadow-sm transition-all duration-300 group">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity duration-300" href="index.html">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hexagon</span>
+                Xcale Agency
+            </a>
+<nav class="hidden md:flex gap-8 items-center font-label-md text-label-md uppercase tracking-wider">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
+<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+</div>
+</div>
+</div>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#contacto">Contacto</a>
+</nav>
+<a class="hidden md:flex bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md uppercase tracking-wider px-6 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(30,125,184,0.3)] hover:shadow-[0_0_25px_rgba(30,125,184,0.6)] active:scale-95" href="index.html#contacto">
+                Get Started
+            </a>
+<button aria-label="Abrir menú" class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-[120px]">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 pt-10">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 border border-primary-container/30 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">memory</span>
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider">Servicio Especializado</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                    Automatización y <br/>
+<span class="tech-gradient-text">Diagnóstico de Procesos</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Transformamos operaciones empresariales mediante el análisis profundo y la integración de arquitecturas automatizadas. Elevamos la eficiencia operativa, eliminamos fricciones sistémicas y liberamos capital humano para tareas de alto valor estratégico.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(30,125,184,0.4)] hover:shadow-[0_0_30px_rgba(30,125,184,0.7)] flex items-center gap-2">
+                        Iniciar Diagnóstico
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="absolute inset-0 bg-primary/10 rounded-xl blur-2xl"></div>
+<img class="relative w-full aspect-square object-cover rounded-xl border border-outline-variant/20 shadow-2xl z-10 mix-blend-lighten" data-alt="A highly detailed 3D rendering of an abstract technological core. Glowing data streams and interconnected futuristic nodes float in a dark void. The primary colors are deep space black, neon cyan, and brilliant teal. The lighting is dramatic and cinematic, emphasizing the glass and metallic textures of the data nodes. The overall aesthetic conveys advanced artificial intelligence and high-end software engineering in a dark-tech style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrLDIPW-EBYnz2zRQ5I7hnI2gIiNrZNX1n1kdmEt5zKjTWKZ9U8TNVSd-wsqNT3SUiG68V2p3pv23Bab8XgbxuMU4X-SuoSWxh82YbwC0-cpKwBcKSj25z0jOA5OtjpXTDEFEdGEnBc9tHbz1OtvgyaE4mSM2Xb2YP4wE7U6cCGxlgKyi13hjeu_LZkrZq1KVOO0f-1gwiz0cClcvsOwOJytdDXtc77ILmipuLJM6OVh8QObOrYHNNGAG9N7Axutv4-dp1y2FMEM3X"/>
+</div>
+</section>
+<!-- Fases del Diagnóstico (Bento Grid) -->
+<section class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 items-center text-center max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Fases del <span class="text-primary">Diagnóstico</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Metodología de precisión estructurada en cuatro etapas críticas para garantizar una transformación digital sin interrupciones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Fase 1: Auditoría -->
+<div class="glass-panel rounded-xl p-8 flex flex-col gap-4 glow-effect group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">troubleshoot</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-surface-variant font-bold text-xl font-headline-lg">01</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Auditoría Operativa</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Mapeo exhaustivo de flujos de trabajo actuales. Captura de datos telemétricos y análisis de cuellos de botella en la arquitectura existente.</p>
+</div>
+<!-- Fase 2: Identificación -->
+<div class="glass-panel rounded-xl p-8 flex flex-col gap-4 glow-effect group md:col-span-2">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">radar</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-surface-variant font-bold text-xl font-headline-lg">02</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Identificación de Vectores</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Aislamiento de procesos redundantes y tareas de bajo valor cognitivo. Clasificación de oportunidades de automatización mediante matrices de impacto vs. esfuerzo tecnológico.</p>
+</div>
+<!-- Fase 3: Optimización -->
+<div class="glass-panel rounded-xl p-8 flex flex-col gap-4 glow-effect group md:col-span-2 relative overflow-hidden">
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-9xl">model_training</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">tune</span>
+</div>
+<div class="flex items-center gap-3 relative z-10">
+<span class="text-surface-variant font-bold text-xl font-headline-lg">03</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Ingeniería de Optimización</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl relative z-10">Diseño de arquitecturas de flujo de datos optimizadas. Reducción de latencias operativas mediante la reestructuración lógica de dependencias de sistemas.</p>
+</div>
+<!-- Fase 4: Implementación -->
+<div class="glass-panel rounded-xl p-8 flex flex-col gap-4 glow-effect group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-surface-variant font-bold text-xl font-headline-lg">04</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Despliegue e Implementación</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Integración de scripts y bots de RPA en el entorno de producción. Monitoreo en tiempo real y ajuste fino post-despliegue.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="glass-panel rounded-2xl p-12 text-center flex flex-col items-center gap-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Escale sus Operaciones Hoy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Contacte a nuestros ingenieros para agendar una evaluación preliminar de su infraestructura de procesos.</p>
+<button class="mt-4 bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md uppercase tracking-wider px-10 py-4 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(30,125,184,0.4)] hover:shadow-[0_0_30px_rgba(30,125,184,0.7)] flex items-center gap-3">
+                Agendar Consultoría
+                <span class="material-symbols-outlined">calendar_month</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-20 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-xl text-headline-xl font-black text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hexagon</span>
+                    Xcale
+                </div>
+<p class="text-on-surface-variant font-body-md text-body-md mt-4">
+                    © 2024 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Navegación</h4>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">IA &amp; Consultoría</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Nosotros</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Soporte</h4>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Contacto</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Conectar</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">hexagon</span>Xcale</span>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+</div>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+</div>
+</div>
+<script>
+        function toggleMobileMenu(){
+            var m=document.getElementById('mobile-menu');
+            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+        }
+</script>
+</body></html>

@@ -1,0 +1,458 @@
+<!-- Xcale Agency - Super Landing (Home) -->
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Xcale Agency · Ingeniería de Software, IA y Conversión</title>
+<meta content="Agencia de ingeniería digital: software a medida, chatbots con IA, landing pages de alto rendimiento, automatización de procesos, consultoría AI y Business Intelligence." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#272a2c",
+                        "surface-container-lowest": "#0b0f10",
+                        "inverse-primary": "#006397",
+                        "on-tertiary": "#472a00",
+                        "primary": "#92ccff",
+                        "on-background": "#e0e3e5",
+                        "tertiary": "#ffb962",
+                        "surface-container": "#1d2022",
+                        "on-secondary-container": "#a8b6ca",
+                        "on-primary-fixed": "#001d31",
+                        "on-secondary-fixed-variant": "#3a4859",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-tertiary-container": "#3e2400",
+                        "on-secondary-fixed": "#0f1c2c",
+                        "on-secondary": "#243141",
+                        "tertiary-fixed": "#ffddb9",
+                        "secondary-fixed-dim": "#bac8dc",
+                        "secondary-fixed": "#d6e4f9",
+                        "outline": "#8a919b",
+                        "tertiary-container": "#c68222",
+                        "surface-variant": "#323537",
+                        "inverse-on-surface": "#2d3133",
+                        "secondary-container": "#3a4859",
+                        "on-primary-fixed-variant": "#004b73",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e0e3e5",
+                        "primary-fixed-dim": "#92ccff",
+                        "primary-fixed": "#cce5ff",
+                        "on-primary": "#003351",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#92ccff",
+                        "surface-container-low": "#191c1e",
+                        "background": "#101415",
+                        "surface-container-highest": "#323537",
+                        "secondary": "#bac8dc",
+                        "surface-dim": "#101415",
+                        "on-primary-container": "#00060e",
+                        "surface-bright": "#363a3b",
+                        "tertiary-fixed-dim": "#ffb962",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "primary-container": "#1e7db8",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e0e3e5",
+                        "outline-variant": "#404850",
+                        "surface": "#101415",
+                        "on-surface-variant": "#c0c7d1"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "container-max": "1280px", "gutter": "24px", "margin-desktop": "64px", "base": "8px", "margin-mobile": "16px" },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"], "headline-xl": ["Inter"], "display-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0A0F1E; }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .milled-edge {
+            border: 1px solid transparent;
+            background-image: linear-gradient(#111827, #111827), linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        .text-glow { text-shadow: 0 0 24px rgba(146, 204, 255, 0.35); }
+        .gradient-text {
+            background: linear-gradient(135deg, #92ccff 0%, #1e7db8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect:hover { box-shadow: 0 0 24px rgba(30, 125, 184, 0.35); border-color: rgba(146,204,255,0.5); }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        html { scroll-behavior: smooth; }
+        @keyframes xcMenuSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes xcMenuFade { from { opacity: 0; } to { opacity: 1; } }
+        #mobile-menu:not(.hidden) > div:last-child { animation: xcMenuSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1); }
+        #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
+    </style>
+</head>
+<body class="text-on-surface bg-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-background/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/10 shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity duration-300" href="#top">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hexagon</span>
+                Xcale Agency
+            </a>
+<div class="hidden md:flex gap-8 items-center font-label-md text-label-md uppercase tracking-wider">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#top">Inicio</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
+<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+</div>
+</div>
+</div>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contacto">Contacto</a>
+</div>
+<a class="hidden md:block bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-md text-label-md uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(30,125,184,0.5)]" href="#contacto">
+                Get Started
+            </a>
+<button aria-label="Abrir menú" class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Ambient Glows -->
+<div class="fixed top-0 left-0 w-[800px] h-[800px] bg-primary-container/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2 z-0"></div>
+<div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-inverse-primary/10 rounded-full blur-[100px] pointer-events-none translate-x-1/3 translate-y-1/3 z-0"></div>
+<main class="relative z-10" id="top">
+<!-- Hero Section -->
+<header class="relative pt-40 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden bg-grid-pattern">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-inverse-primary rounded-full mix-blend-screen filter blur-[100px] animate-pulse delay-1000"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 bg-primary-container/20 border border-primary-container/50 px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Precision Engineered Solutions</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface text-glow">
+                    Ingeniería digital que <span class="gradient-text">escala su negocio</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Una sola agencia para todo su stack: software a medida, IA conversacional, landing pages de alta conversión, automatización de procesos, consultoría de inteligencia artificial y Business Intelligence. Robusto, escalable y preparado para el futuro.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)] flex items-center gap-2" href="#contacto">
+                        Agendar Consulta
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline hover:border-primary text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition-colors duration-300" href="#servicios">
+                        Explorar Servicios
+                    </a>
+</div>
+<!-- Hero stats strip -->
+<div class="grid grid-cols-3 gap-4 pt-8 max-w-xl">
+<div>
+<div class="font-headline-lg text-headline-lg text-primary text-glow">+340%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Conversión media</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary text-glow">24/7</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Soporte con IA</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary text-glow">98/100</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Lighthouse</div>
+</div>
+</div>
+</div>
+<!-- Hero Visual -->
+<div class="lg:col-span-5 relative h-[420px] hidden lg:flex items-center justify-center rounded-xl overflow-hidden glass-panel milled-edge group">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container/50 to-surface-container-lowest/50 z-0"></div>
+<div class="relative z-10 text-center space-y-4">
+<span class="material-symbols-outlined text-[90px] text-primary opacity-80 group-hover:scale-110 transition-transform duration-500" style="font-variation-settings: 'wght' 200;">hub</span>
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest opacity-60">System Online</p>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/20 rounded-full blur-[50px] z-0"></div>
+</div>
+</div>
+</header>
+<!-- Servicios (los 6 features) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/50 relative" id="servicios">
+<div class="max-w-container-max mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Nuestros Servicios</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Un ecosistema completo de soluciones</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Seis disciplinas que se integran perfectamente en su operación. Explore cada servicio en detalle.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Software a Medida (large) -->
+<a class="md:col-span-2 glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 glow-effect group relative overflow-hidden" href="desarrollo-software.html">
+<div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">code</span>
+<h3 class="font-headline-lg text-headline-lg">Desarrollo de Software a Medida</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div class="relative z-10 space-y-3">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">Arquitecturas digitales robustas, escalables y seguras. Transformamos su visión empresarial en software de alto rendimiento.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">APIs</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">Escalabilidad</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">Seguridad</span>
+</div>
+</div>
+</a>
+<!-- ChatBots -->
+<a class="glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 glow-effect group" href="chatbots.html">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">smart_toy</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-[24px] font-semibold leading-tight">ChatBots Inteligentes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Asistentes virtuales con NLP. Soporte 24/7, omnicanal e integración CRM.</p>
+</div>
+</a>
+<!-- Landing Pages -->
+<a class="glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 glow-effect group" href="landing-pages.html">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-tertiary text-4xl">trending_up</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-[24px] font-semibold leading-tight">Landing Pages &amp; Web</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Máquinas de conversión. Velocidad extrema, SEO técnico y copywriting persuasivo.</p>
+</div>
+</a>
+<!-- Automatización -->
+<a class="glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 glow-effect group" href="automatizacion.html">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">tune</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-[24px] font-semibold leading-tight">Automatización &amp; Diagnóstico</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Auditoría, optimización y RPA. Eliminamos fricciones y liberamos capital humano.</p>
+</div>
+</a>
+<!-- Consultoría AI (large) -->
+<a class="md:col-span-2 glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 glow-effect group relative overflow-hidden" href="consultoria-ai.html">
+<div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">model_training</span>
+<h3 class="font-headline-lg text-headline-lg">IA &amp; Consultoría</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div class="relative z-10 space-y-3">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">AI Readiness, roadmap estratégico y Proof of Concept. Machine Learning, Computer Vision y LLMs a medida con ética y seguridad.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">LLMs</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">ML Predictivo</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-label-md">Computer Vision</span>
+</div>
+</div>
+</a>
+<!-- Data Analytics & BI (full width) -->
+<a class="md:col-span-3 glass-panel milled-edge rounded-xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:-translate-y-1 transition-transform duration-300 glow-effect group relative overflow-hidden" href="data-analytics.html">
+<div class="absolute -right-10 -top-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex items-start gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">insights</span>
+<div class="space-y-2 max-w-2xl">
+<h3 class="font-headline-lg text-headline-lg">Data Analytics &amp; Business Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transformamos datos crudos en decisiones estratégicas: extracción, limpieza, visualización y predicción. Dashboards en tiempo real con PowerBI, Tableau, Python y SQL avanzado.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors relative z-10 self-start md:self-center">arrow_outward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Proceso / Por qué Xcale -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop relative" id="proceso">
+<div class="max-w-container-max mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Por qué Xcale</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Precisión en cada fase</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Una metodología estructurada que garantiza una transformación digital sin interrupciones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">troubleshoot</span>
+</div>
+<span class="text-surface-variant font-bold text-xl font-headline-lg">01</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Auditoría</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mapeo exhaustivo de procesos y análisis de cuellos de botella.</p>
+</div>
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">route</span>
+</div>
+<span class="text-surface-variant font-bold text-xl font-headline-lg">02</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Estrategia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hoja de ruta tecnológica alineada con sus objetivos de negocio.</p>
+</div>
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">tune</span>
+</div>
+<span class="text-surface-variant font-bold text-xl font-headline-lg">03</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Ingeniería</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Construcción optimizada con código limpio y arquitectura escalable.</p>
+</div>
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+</div>
+<span class="text-surface-variant font-bold text-xl font-headline-lg">04</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-xl">Despliegue</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Implementación, monitoreo en tiempo real y ajuste fino continuo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impacto en números -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/80 border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto text-center space-y-16">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">El impacto en números</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-primary text-glow">+340%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Tasa de conversión</div>
+</div>
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-tertiary text-glow">60%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Menos costos de soporte L1</div>
+</div>
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-primary text-glow">24/7</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Disponibilidad con IA</div>
+</div>
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-tertiary text-glow">&lt;1s</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Tiempo de carga web</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contacto -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden" id="contacto">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10 glass-panel milled-edge rounded-2xl p-12">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">¿Listo para escalar su operación?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Hablemos sobre su caso de uso. Analizamos su situación actual y diseñamos una solución estratégica a medida — desde el primer prototipo hasta el despliegue a escala.
+            </p>
+<a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-10 py-5 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)] mt-4" href="mailto:hola@xcale.agency">
+                Iniciar Consultoría Gratuita
+                <span class="material-symbols-outlined">calendar_month</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-20 border-t border-outline-variant/10 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-xl text-headline-xl font-black text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hexagon</span>
+                    Xcale
+                </div>
+<p class="text-on-surface-variant font-body-md text-body-md mt-2">
+                    © 2024 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Servicios</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="desarrollo-software.html">Software a Medida</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="chatbots.html">ChatBots Inteligentes</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="landing-pages.html">Landing Pages &amp; Web</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Soluciones</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="automatizacion.html">Automatización &amp; Diagnóstico</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="consultoria-ai.html">IA &amp; Consultoría</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="data-analytics.html">Data Analytics &amp; BI</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Legal</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Nav shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.style.backgroundColor = 'rgba(10, 15, 30, 0.85)';
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.style.backgroundColor = 'rgba(16, 20, 21, 0.7)';
+            }
+        });
+    </script>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">hexagon</span>Xcale</span>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+</div>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+</div>
+</div>
+<script>
+        function toggleMobileMenu(){
+            var m=document.getElementById('mobile-menu');
+            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+        }
+</script>
+</body></html>

@@ -1,0 +1,415 @@
+<!-- ChatBots Inteligentes - Detalle -->
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Desarrollo de ChatBots Inteligentes | Xcale Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#272a2c",
+                        "surface-container-lowest": "#0b0f10",
+                        "inverse-primary": "#006397",
+                        "on-tertiary": "#472a00",
+                        "primary": "#92ccff",
+                        "on-background": "#e0e3e5",
+                        "tertiary": "#ffb962",
+                        "surface-container": "#1d2022",
+                        "on-secondary-container": "#a8b6ca",
+                        "on-primary-fixed": "#001d31",
+                        "on-secondary-fixed-variant": "#3a4859",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-tertiary-container": "#3e2400",
+                        "on-secondary-fixed": "#0f1c2c",
+                        "on-secondary": "#243141",
+                        "tertiary-fixed": "#ffddb9",
+                        "secondary-fixed-dim": "#bac8dc",
+                        "secondary-fixed": "#d6e4f9",
+                        "outline": "#8a919b",
+                        "tertiary-container": "#c68222",
+                        "surface-variant": "#323537",
+                        "inverse-on-surface": "#2d3133",
+                        "secondary-container": "#3a4859",
+                        "on-primary-fixed-variant": "#004b73",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e0e3e5",
+                        "primary-fixed-dim": "#92ccff",
+                        "primary-fixed": "#cce5ff",
+                        "on-primary": "#003351",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#92ccff",
+                        "surface-container-low": "#191c1e",
+                        "background": "#101415",
+                        "surface-container-highest": "#323537",
+                        "secondary": "#bac8dc",
+                        "surface-dim": "#101415",
+                        "on-primary-container": "#00060e",
+                        "surface-bright": "#363a3b",
+                        "tertiary-fixed-dim": "#ffb962",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "primary-container": "#1e7db8",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e0e3e5",
+                        "outline-variant": "#404850",
+                        "surface": "#101415",
+                        "on-surface-variant": "#c0c7d1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0A0F1E; } /* Dark Navy Base */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.6); /* Dark Blue-Grey */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .text-glow { text-shadow: 0 0 20px rgba(146, 204, 255, 0.3); }
+        .gradient-text {
+            background: linear-gradient(135deg, #92ccff 0%, #1e7db8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .milled-edge {
+            border: 1px solid transparent;
+            background-image: linear-gradient(#111827, #111827), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+            @keyframes xcMenuSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes xcMenuFade { from { opacity: 0; } to { opacity: 1; } }
+        #mobile-menu:not(.hidden) > div:last-child { animation: xcMenuSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1); }
+        #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
+    </style>
+</head>
+<body class="text-on-surface bg-background antialiased selection:bg-primary-container selection:text-on-primary-container font-sans">
+<!-- TopNavBar -->
+<nav class="bg-background/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface cursor-pointer hover:opacity-80 transition-opacity duration-300" href="index.html">
+                Xcale Agency
+            </a>
+<div class="hidden md:flex gap-gutter items-center font-label-md text-label-md uppercase tracking-wider">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
+<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+</div>
+</div>
+</div>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#contacto">Contacto</a>
+</div>
+<button class="hidden md:block bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(30,125,184,0.5)]">
+                Get Started
+            </button>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button aria-label="Abrir menú" class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-40 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<!-- Abstract Tech Background -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-inverse-primary rounded-full mix-blend-screen filter blur-[100px] animate-pulse delay-1000"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-primary-container/20 border border-primary-container/50 px-4 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Conversational AI</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-glow">
+                    Desarrollo de <span class="gradient-text">ChatBots Inteligentes</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Eleva la experiencia de tus clientes con asistentes virtuales potenciados por NLP. Soporte 24/7, resolución inmediata y escalabilidad sin precedentes para empresas tech-forward.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)]">
+                        Agendar Demo
+                    </button>
+<button class="border border-outline hover:border-primary text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition-colors duration-300">
+                        Ver Casos de Éxito
+                    </button>
+</div>
+</div>
+<!-- Hero Visual: Abstract Data Nodes -->
+<div class="relative h-[500px] hidden lg:block rounded-xl overflow-hidden glass-panel milled-edge flex items-center justify-center group">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container/50 to-surface-container-lowest/50 z-0"></div>
+<div class="relative z-10 text-center space-y-4">
+<span class="material-symbols-outlined text-[80px] text-primary opacity-80 group-hover:scale-110 transition-transform duration-500">forum</span>
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest opacity-60">System Ready</p>
+</div>
+<!-- Decorative glowing orb behind icon -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/20 rounded-full blur-[50px] z-0"></div>
+</div>
+</div>
+</header>
+<!-- Capacidades Section (Bento Grid) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/50 relative">
+<div class="max-w-container-max mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Capacidades Core</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Arquitectura modular diseñada para integrarse perfectamente en tu ecosistema actual.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+<!-- NLP Card -->
+<div class="md:col-span-2 glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 group">
+<div class="flex items-start justify-between">
+<div class="space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<h3 class="font-headline-lg text-headline-lg">Procesamiento de Lenguaje Natural (NLP)</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Nuestros modelos entienden el contexto, la intención y el sentimiento, permitiendo conversaciones fluidas y humanas más allá de simples reglas lógicas.</p>
+</div>
+<!-- Multichannel Card -->
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 group">
+<div class="space-y-2">
+<span class="material-symbols-outlined text-tertiary text-3xl">hub</span>
+<h3 class="font-headline-lg text-[24px] font-semibold leading-tight">Omnicanalidad</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Despliegue unificado en Web, WhatsApp, Slack y MS Teams.</p>
+</div>
+<!-- CRM Integration Card -->
+<div class="glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 group">
+<div class="space-y-2">
+<span class="material-symbols-outlined text-inverse-primary text-3xl">database</span>
+<h3 class="font-headline-lg text-[24px] font-semibold leading-tight">Integración CRM</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Sincronización bidireccional en tiempo real con Salesforce, HubSpot y sistemas legacy.</p>
+</div>
+<!-- Personalization Card -->
+<div class="md:col-span-2 glass-panel milled-edge rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+<div class="relative z-10 space-y-2 max-w-md">
+<span class="material-symbols-outlined text-primary text-3xl">fingerprint</span>
+<h3 class="font-headline-lg text-headline-lg">Hiper-Personalización</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Respuestas contextualizadas basadas en el historial del usuario, estado de la cuenta y comportamiento en tiempo real, aumentando la resolución al primer contacto.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Mockup Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop relative">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Chat Interface Mockup -->
+<div class="relative h-[600px] w-full max-w-md mx-auto glass-panel milled-edge rounded-[2rem] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<!-- Header -->
+<div class="flex items-center gap-4 pb-4 border-b border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-sm">smart_toy</span>
+</div>
+<div>
+<div class="font-label-md text-label-md">Xcale Assist</div>
+<div class="text-xs text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Online
+                        </div>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="h-[450px] overflow-y-auto py-4 space-y-4 pr-2">
+<!-- Bot Message -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-xs">smart_toy</span>
+</div>
+<div class="bg-surface-variant rounded-2xl rounded-tl-sm p-3 font-body-md text-sm text-on-surface">
+                            Hola, detecto que estás intentando integrar la API v2. ¿Necesitas ayuda con los endpoints de autenticación?
+                        </div>
+</div>
+<!-- User Message -->
+<div class="flex gap-3 justify-end">
+<div class="bg-primary-container text-on-primary-container rounded-2xl rounded-tr-sm p-3 font-body-md text-sm">
+                            Sí, estoy recibiendo un error 401 al usar el token JWT.
+                        </div>
+</div>
+<!-- Bot Message with Code (Mock) -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-xs">smart_toy</span>
+</div>
+<div class="bg-surface-variant rounded-2xl rounded-tl-sm p-3 font-body-md text-sm text-on-surface space-y-2">
+<p>Entendido. Asegúrate de incluir el prefijo 'Bearer' en el header. Aquí tienes un ejemplo:</p>
+<div class="bg-surface-container-lowest p-2 rounded text-xs font-mono text-outline">
+                                Authorization: Bearer eyJhb...
+                            </div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-high rounded-full p-2 flex items-center gap-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body-md flex-1 text-on-surface px-2 outline-none" disabled="" placeholder="Escribe un mensaje..." type="text"/>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary text-sm">send</span>
+</button>
+</div>
+</div>
+<!-- Context -->
+<div class="space-y-8">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Interfaces que se sienten humanas.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Diseñamos flujos conversacionales (UX Writing) que minimizan la fricción. El chatbot no es solo una herramienta de soporte, es una extensión de la identidad de su marca técnica.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Transiciones suaves a agentes humanos (Handoff).</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Análisis de sentimiento en tiempo real.</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Soporte multi-idioma nativo.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ROI / Why Chatbots Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/80 border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto text-center space-y-16">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">El Impacto en Números</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-primary text-glow">60%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Reducción en Costos de Soporte L1</div>
+</div>
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-tertiary text-glow">24/7</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Disponibilidad Ininterrumpida</div>
+</div>
+<div class="p-8 space-y-4 glass-panel milled-edge rounded-xl">
+<div class="font-display-lg text-display-lg text-primary text-glow">&lt;8s</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Tiempo Promedio de Respuesta</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<!-- Abstract Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10 glass-panel milled-edge rounded-2xl p-12">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">¿Listo para automatizar sus interacciones?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Hablemos sobre su caso de uso específico y cómo nuestra arquitectura de IA conversacional puede escalar sus operaciones.
+            </p>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-10 py-5 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)] mt-4">
+                Iniciar Consultoría Gratuita
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-20 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 space-y-4">
+<div class="font-headline-xl text-headline-xl font-black text-on-surface cursor-pointer">
+                    Xcale Agency
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    © 2024 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Servicios</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">IA &amp; Consultoría</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Desarrollo Web</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Compañía</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Nosotros</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Contacto</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">hexagon</span>Xcale</span>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+</div>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+</div>
+</div>
+<script>
+        function toggleMobileMenu(){
+            var m=document.getElementById('mobile-menu');
+            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+        }
+</script>
+</body></html>

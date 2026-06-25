@@ -1,0 +1,374 @@
+<!-- Data Analytics & BI - Detalle -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Analytics y Business Intelligence - Xcale Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#272a2c",
+                      "surface-container-lowest": "#0b0f10",
+                      "inverse-primary": "#006397",
+                      "on-tertiary": "#472a00",
+                      "primary": "#92ccff",
+                      "on-background": "#e0e3e5",
+                      "tertiary": "#ffb962",
+                      "surface-container": "#1d2022",
+                      "on-secondary-container": "#a8b6ca",
+                      "on-primary-fixed": "#001d31",
+                      "on-secondary-fixed-variant": "#3a4859",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#2b1700",
+                      "on-tertiary-container": "#3e2400",
+                      "on-secondary-fixed": "#0f1c2c",
+                      "on-secondary": "#243141",
+                      "tertiary-fixed": "#ffddb9",
+                      "secondary-fixed-dim": "#bac8dc",
+                      "secondary-fixed": "#d6e4f9",
+                      "outline": "#8a919b",
+                      "tertiary-container": "#c68222",
+                      "surface-variant": "#323537",
+                      "inverse-on-surface": "#2d3133",
+                      "secondary-container": "#3a4859",
+                      "on-primary-fixed-variant": "#004b73",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#e0e3e5",
+                      "primary-fixed-dim": "#92ccff",
+                      "primary-fixed": "#cce5ff",
+                      "on-primary": "#003351",
+                      "on-error-container": "#ffdad6",
+                      "surface-tint": "#92ccff",
+                      "surface-container-low": "#191c1e",
+                      "background": "#101415",
+                      "surface-container-highest": "#323537",
+                      "secondary": "#bac8dc",
+                      "surface-dim": "#101415",
+                      "on-primary-container": "#00060e",
+                      "surface-bright": "#363a3b",
+                      "tertiary-fixed-dim": "#ffb962",
+                      "on-tertiary-fixed-variant": "#663e00",
+                      "primary-container": "#1e7db8",
+                      "error": "#ffb4ab",
+                      "on-surface": "#e0e3e5",
+                      "outline-variant": "#404850",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c0c7d1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "headline-xl": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                      "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0F1E;
+            color: #e0e3e5;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-nav {
+            background: rgba(10, 15, 30, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(30, 125, 184, 0.4);
+            border-color: rgba(30, 125, 184, 0.6);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #92ccff 0%, #1e7db8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .btn-primary {
+            background-color: #1e7db8;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(30, 125, 184, 0.6);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            border: 1px solid #1e7db8;
+            color: #1e7db8;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-secondary:hover {
+            background-color: rgba(30, 125, 184, 0.1);
+            transform: translateY(-2px);
+        }
+            @keyframes xcMenuSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes xcMenuFade { from { opacity: 0; } to { opacity: 1; } }
+        #mobile-menu:not(.hidden) > div:last-child { animation: xcMenuSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1); }
+        #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm h-20">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-on-surface cursor-pointer hover:opacity-80 transition-opacity duration-300" href="index.html">
+                Xcale Agency
+            </a>
+<div class="hidden md:flex space-x-8 items-center font-label-md text-label-md uppercase tracking-wider">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
+<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+</div>
+</div>
+</div>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#contacto">Contacto</a>
+</div>
+<div class="hidden md:block">
+<button class="btn-primary font-label-md text-label-md px-6 py-3 rounded-full hover:opacity-80 transition-opacity duration-300">
+                    Get Started
+                </button>
+</div>
+<button aria-label="Abrir menú" class="md:hidden flex items-center text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center overflow-hidden bg-grid-pattern px-margin-desktop py-20">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0F1E] pointer-events-none z-0"></div>
+<div class="relative z-10 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 lg:col-span-7 space-y-8">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container/20 border border-primary-container/50">
+<span class="material-symbols-outlined text-primary text-sm mr-2" data-weight="fill">insights</span>
+<span class="font-label-md text-label-md text-primary uppercase">Servicios Especializados</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                        Data Analytics &amp; <br/>
+<span class="text-gradient">Business Intelligence</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Transformamos datos crudos en decisiones estratégicas. Arquitecturas de datos de alto rendimiento, visualización avanzada y analítica predictiva para líderes empresariales que exigen precisión.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="btn-primary font-label-md text-label-md px-8 py-4 rounded flex items-center gap-2">
+                            Explorar Soluciones
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="btn-secondary font-label-md text-label-md px-8 py-4 rounded flex items-center gap-2">
+                            Agendar Consultoría
+                        </button>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-5 relative hidden lg:block h-[500px]">
+<div class="absolute inset-0 rounded-xl overflow-hidden glass-card p-4 flex items-center justify-center">
+<div class="w-full h-full rounded-lg overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 opacity-60 mix-blend-screen" data-alt="A highly complex, abstract digital representation of glowing data streams and interconnected nodes against a deep dark blue and black background. The data points illuminate in vivid teal-blue and cyan, suggesting high-speed processing and analytical depth. The visual style is modern, architectural, and conveys a sense of powerful enterprise technology in a Dark-Tech aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChxyq21W7hIz38BY163Y5RN5ak3H8TiT3CXMKOKf5_8KxJ3zrwWABtrpqdjLpWzelc8gwPTfNV8g5rR1AMUe9fjubHORBXAzcHYa-FMGPhN4J82uEQK4laQnom2RXMz5zvuCTWstWS9nrbiBAcU4lZAo9LweNQNOL9YCmJfx_YYQEyxLO5VjKOhJE9k4SdhaxkWhuDdp8PpQQhBqaI1AgMeg-P1j4nUbIN1_KPq_0syz2meUZ_UCEQro-zw_lz9a4Ttemdah_fzxVZ')"></div>
+<!-- Floating UI Elements to simulate dashboard -->
+<div class="absolute top-8 left-8 right-8 glass-card rounded-lg p-4 animate-pulse" style="animation-duration: 3s;">
+<div class="h-2 bg-primary/20 rounded w-1/3 mb-4"></div>
+<div class="flex gap-2">
+<div class="h-16 w-16 bg-primary/10 rounded-full border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<div class="flex-1 space-y-2">
+<div class="h-2 bg-primary/20 rounded w-full"></div>
+<div class="h-2 bg-primary/20 rounded w-4/5"></div>
+<div class="h-2 bg-primary/20 rounded w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capas de Datos (Bento Grid) -->
+<section class="py-24 px-margin-desktop relative">
+<div class="max-w-container-max mx-auto space-y-16">
+<div class="text-center space-y-4 max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Arquitectura de Decisión</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Un enfoque sistemático en cuatro capas para garantizar la integridad, velocidad y utilidad de la información corporativa.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
+<!-- Layer 1: Extraction -->
+<div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 flex flex-col h-full lg:row-span-2">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">cloud_download</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">1. Extracción</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Integración perfecta de múltiples fuentes de datos. Conectamos ERPs, CRMs, APIs externas y bases de datos legacy en lagos de datos unificados y seguros.</p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="px-3 py-1 rounded bg-surface-container-high text-on-surface text-xs font-label-md">ETL Pipelines</span>
+<span class="px-3 py-1 rounded bg-surface-container-high text-on-surface text-xs font-label-md">API Integration</span>
+</div>
+</div>
+<!-- Layer 2: Cleaning -->
+<div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 flex flex-col h-full lg:col-span-2">
+<div class="flex items-start justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">cleaning_services</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant">check_circle</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">2. Limpieza y Transformación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Algoritmos automatizados para la detección de anomalías, deduplicación y normalización. Garantizamos que sus modelos analíticos se alimenten exclusivamente de datos prístinos y confiables.</p>
+</div>
+<!-- Layer 3: Visualization -->
+<div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">bar_chart</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">3. Visualización</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dashboards interactivos en tiempo real. Interfaces intuitivas que traducen la complejidad en KPIs claros para stakeholders de negocio.</p>
+</div>
+<!-- Layer 4: Prediction -->
+<div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 flex flex-col h-full border-t border-primary/30 relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">online_prediction</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 relative z-10">4. Predicción</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Modelos de Machine Learning aplicados al forecasting de demanda, análisis de abandono y optimización de precios basados en comportamiento histórico.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stack Tecnológico -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/3 space-y-6">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Stack<br/>Tecnológico</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Nuestra infraestructura se apoya en las herramientas más robustas y escalables de la industria, asegurando rendimiento empresarial.</p>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<!-- Tech Items -->
+<div class="glass-card rounded-lg p-6 flex flex-col items-center justify-center text-center gap-4 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">database</span>
+<span class="font-label-md text-label-md text-on-surface">SQL Avanzado</span>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col items-center justify-center text-center gap-4 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">code</span>
+<span class="font-label-md text-label-md text-on-surface">Python / R</span>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col items-center justify-center text-center gap-4 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">pie_chart</span>
+<span class="font-label-md text-label-md text-on-surface">PowerBI / Tableau</span>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col items-center justify-center text-center gap-4 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">cloud</span>
+<span class="font-label-md text-label-md text-on-surface">Cloud Data</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-xl text-headline-xl font-black text-on-surface">
+                    Xcale Agency
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+                    © 2024 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-12 gap-y-4 justify-start md:justify-end">
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">Servicios</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">IA &amp; Consultoría</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">Nosotros</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">Contacto</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">hexagon</span>Xcale</span>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+</div>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+</div>
+</div>
+<script>
+        function toggleMobileMenu(){
+            var m=document.getElementById('mobile-menu');
+            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+        }
+</script>
+</body></html>

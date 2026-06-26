@@ -1,0 +1,15 @@
+{
+  "name": "xcale-agency",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web Xcale Agency — HTML estático + Tailwind compilado.",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o xcale.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o xcale.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss": "^3.4.0"
+  }
+}

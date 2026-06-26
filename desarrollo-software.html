@@ -5,99 +5,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Desarrollo de Software a Medida - Xcale Agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-high": "#272a2c",
-                    "surface-container-lowest": "#0b0f10",
-                    "inverse-primary": "#006397",
-                    "on-tertiary": "#472a00",
-                    "primary": "#92ccff",
-                    "on-background": "#e0e3e5",
-                    "tertiary": "#ffb962",
-                    "surface-container": "#1d2022",
-                    "on-secondary-container": "#a8b6ca",
-                    "on-primary-fixed": "#001d31",
-                    "on-secondary-fixed-variant": "#3a4859",
-                    "on-error": "#690005",
-                    "on-tertiary-fixed": "#2b1700",
-                    "on-tertiary-container": "#3e2400",
-                    "on-secondary-fixed": "#0f1c2c",
-                    "on-secondary": "#243141",
-                    "tertiary-fixed": "#ffddb9",
-                    "secondary-fixed-dim": "#bac8dc",
-                    "secondary-fixed": "#d6e4f9",
-                    "outline": "#8a919b",
-                    "tertiary-container": "#c68222",
-                    "surface-variant": "#323537",
-                    "inverse-on-surface": "#2d3133",
-                    "secondary-container": "#3a4859",
-                    "on-primary-fixed-variant": "#004b73",
-                    "error-container": "#93000a",
-                    "inverse-surface": "#e0e3e5",
-                    "primary-fixed-dim": "#92ccff",
-                    "primary-fixed": "#cce5ff",
-                    "on-primary": "#003351",
-                    "on-error-container": "#ffdad6",
-                    "surface-tint": "#92ccff",
-                    "surface-container-low": "#191c1e",
-                    "background": "#101415",
-                    "surface-container-highest": "#323537",
-                    "secondary": "#bac8dc",
-                    "surface-dim": "#101415",
-                    "on-primary-container": "#00060e",
-                    "surface-bright": "#363a3b",
-                    "tertiary-fixed-dim": "#ffb962",
-                    "on-tertiary-fixed-variant": "#663e00",
-                    "primary-container": "#1e7db8",
-                    "error": "#ffb4ab",
-                    "on-surface": "#e0e3e5",
-                    "outline-variant": "#404850",
-                    "surface": "#101415",
-                    "on-surface-variant": "#c0c7d1"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "margin-desktop": "64px",
-                    "base": "8px",
-                    "margin-mobile": "16px"
-            },
-            "fontFamily": {
-                    "headline-lg": ["Inter"],
-                    "headline-xl": ["Inter"],
-                    "display-lg-mobile": ["Inter"],
-                    "label-md": ["Inter"],
-                    "display-lg": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "body-md": ["Inter"]
-            },
-            "fontSize": {
-                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
+<link rel="stylesheet" href="xcale.css"/>
 <style>
         .glass-panel {
             background: rgba(17, 24, 39, 0.7);
@@ -120,39 +33,39 @@
         #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
         html, body { overflow-x: hidden; max-width: 100%; }
     </style>
-<link href="xcale_logo.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-md border-b border-outline-variant/10 shadow-sm">
 <div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
 <a class="flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-300" href="index.html">
-<img alt="Xcale Agency" class="h-10 w-auto" src="xcale_logo_cropped.png"/>
+<img alt="Xcale Agency" class="h-10 w-auto" loading="eager" fetchpriority="high" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
 </a>
 <div class="hidden md:flex space-x-8 items-center font-label-md text-label-md uppercase tracking-wider">
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
 <div class="relative group">
 <button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
-<span class="material-symbols-outlined text-lg">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-lg">expand_more</span>
 </button>
 <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
-<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+<div class="w-72 bg-surface-container-high border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
 </div>
 </div>
 </div>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#contacto">Contacto</a>
 </div>
 <a class="hidden md:block bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300 active:scale-95" href="index.html#contacto">
-                Get Started
+                Empezar
             </a>
-<button aria-label="Abrir menú" class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
-<span class="material-symbols-outlined text-3xl">menu</span>
+<button aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
+<span aria-hidden="true" class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </nav>
@@ -164,7 +77,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
 <div class="space-y-8 z-10">
 <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-md text-label-md uppercase border border-primary-container/30">
-<span class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">code</span>
+<span aria-hidden="true" class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">code</span>
                         Ingeniería de Precisión
                     </div>
 <h1 class="font-display-lg text-display-lg text-on-surface">
@@ -192,9 +105,9 @@
 <footer class="w-full py-20 bg-surface-container-lowest border-t border-outline-variant/10">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
 <div class="col-span-1 md:col-span-1 space-y-4">
-<img alt="Xcale Agency" class="h-12 w-auto self-start object-contain" src="xcale_logo_cropped.png"/>
+<img alt="Xcale Agency" class="h-12 w-auto self-start object-contain" loading="lazy" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
 <p class="font-body-md text-body-md text-on-surface-variant">
-                    © 2025 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                    © 2025 Xcale Agency. Todos los derechos reservados. Soluciones de IA con ingeniería de precisión.
                 </p>
 </div>
 <div class="col-span-1 space-y-4">
@@ -214,8 +127,8 @@
 <div class="col-span-1 space-y-4">
 <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-4">Legal</h4>
 <div class="flex flex-col space-y-2 font-body-md text-body-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Política de Privacidad</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Términos del Servicio</a>
 </div>
 </div>
 </div>
@@ -223,26 +136,26 @@
 <!-- Mobile Menu Overlay -->
 <div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
 <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
-<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-surface-container-lowest border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
 <div class="flex items-center justify-between mb-4">
-<img alt="Xcale Agency" class="h-9 w-auto" src="xcale_logo_cropped.png"/>
-<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+<img alt="Xcale Agency" class="h-9 w-auto" loading="lazy" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span aria-hidden="true" class="material-symbols-outlined text-3xl">close</span></button>
 </div>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">home</span>Inicio</a>
 <p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
-<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span aria-hidden="true" class="material-symbols-outlined">mail</span>Contacto</a>
 </div>
 </div>
 <script>
         function toggleMobileMenu(){
             var m=document.getElementById('mobile-menu');
-            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+            if(m){ m.classList.toggle('hidden'); var _open = !m.classList.contains('hidden'); document.body.style.overflow = _open ? 'hidden' : ''; document.querySelectorAll('[aria-controls="mobile-menu"]').forEach(function(b){ b.setAttribute('aria-expanded', _open); }); }
         }
 </script>
 </body></html>

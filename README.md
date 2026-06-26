@@ -1,6 +1,6 @@
 # Xcale Agency — Sitio Web
 
-Sitio estático de **Xcale Agency**: una super landing más 6 páginas de detalle de servicios, con estética *dark-tech*. Construido con [Tailwind CSS](https://tailwindcss.com) (vía CDN), tipografía **Inter** e iconos **Material Symbols**. No requiere build.
+Sitio estático de **Xcale Agency**: una super landing más 6 páginas de detalle de servicios, con estética *dark-tech*. Construido con [Tailwind CSS](https://tailwindcss.com) **compilado a CSS estático** (`xcale.css`), tipografía **Space Grotesk** (titulares) + **Hanken Grotesk** (cuerpo) e iconos **Material Symbols**.
 
 ## Páginas
 
@@ -19,14 +19,28 @@ Sitio estático de **Xcale Agency**: una super landing más 6 páginas de detall
 - **Navegación unificada** — menú desplegable "Servicios" en escritorio con acceso directo a las 6 sub-áreas desde cualquier página.
 - **Menú móvil** — panel deslizable accesible (abrir/cerrar con backdrop) con animación de entrada.
 - **Logo clicable** — el logotipo "Xcale" regresa al inicio.
-- **Design system compartido** — mismos tokens de color Material, tipografía y componentes (glass panels, milled edges) en todas las páginas.
+- **Design system compartido** — mismos tokens de color Material, tipografía y componentes en todas las páginas, definidos en `tailwind.config.js`.
+- **Accesibilidad** — iconos decorativos con `aria-hidden`, foco visible (`:focus-visible`), `aria-expanded` en el menú móvil y respeto por `prefers-reduced-motion`.
+- **Rendimiento** — CSS purgado y minificado (~43 KB), logo en WebP (~18 KB) e imágenes con `loading`/`decoding`/dimensiones.
+
+## Build (Tailwind)
+
+Los estilos se compilan desde `src/input.css` a `xcale.css` (ya versionado). Solo necesitas recompilar si **añades clases nuevas de Tailwind** en el HTML o tocas `tailwind.config.js` / `src/input.css`.
+
+```bash
+npm install          # una vez
+npm run build:css    # genera xcale.css (purgado + minificado)
+npm run watch:css    # recompila al vuelo durante el desarrollo
+```
+
+> `node_modules/` está en `.gitignore`; `xcale.css` sí se versiona para poder desplegar sin build.
 
 ## Uso
 
 Abre `index.html` en cualquier navegador moderno. Al ser HTML estático, también puede servirse con cualquier servidor estático o desplegarse en GitHub Pages, Netlify, Vercel, etc.
 
 ```bash
-# Opcional: servidor local
+# Servidor local
 python -m http.server 8000
 # luego visita http://localhost:8000
 ```

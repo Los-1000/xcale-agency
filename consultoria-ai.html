@@ -5,102 +5,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IA &amp; Consultoría - Xcale Agency</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-high": "#272a2c",
-                        "surface-container-lowest": "#0b0f10",
-                        "inverse-primary": "#006397",
-                        "on-tertiary": "#472a00",
-                        "primary": "#92ccff",
-                        "on-background": "#e0e3e5",
-                        "tertiary": "#ffb962",
-                        "surface-container": "#1d2022",
-                        "on-secondary-container": "#a8b6ca",
-                        "on-primary-fixed": "#001d31",
-                        "on-secondary-fixed-variant": "#3a4859",
-                        "on-error": "#690005",
-                        "on-tertiary-fixed": "#2b1700",
-                        "on-tertiary-container": "#3e2400",
-                        "on-secondary-fixed": "#0f1c2c",
-                        "on-secondary": "#243141",
-                        "tertiary-fixed": "#ffddb9",
-                        "secondary-fixed-dim": "#bac8dc",
-                        "secondary-fixed": "#d6e4f9",
-                        "outline": "#8a919b",
-                        "tertiary-container": "#c68222",
-                        "surface-variant": "#323537",
-                        "inverse-on-surface": "#2d3133",
-                        "secondary-container": "#3a4859",
-                        "on-primary-fixed-variant": "#004b73",
-                        "error-container": "#93000a",
-                        "inverse-surface": "#e0e3e5",
-                        "primary-fixed-dim": "#92ccff",
-                        "primary-fixed": "#cce5ff",
-                        "on-primary": "#003351",
-                        "on-error-container": "#ffdad6",
-                        "surface-tint": "#92ccff",
-                        "surface-container-low": "#191c1e",
-                        "background": "#101415",
-                        "surface-container-highest": "#323537",
-                        "secondary": "#bac8dc",
-                        "surface-dim": "#101415",
-                        "on-primary-container": "#00060e",
-                        "surface-bright": "#363a3b",
-                        "tertiary-fixed-dim": "#ffb962",
-                        "on-tertiary-fixed-variant": "#663e00",
-                        "primary-container": "#1e7db8",
-                        "error": "#ffb4ab",
-                        "on-surface": "#e0e3e5",
-                        "outline-variant": "#404850",
-                        "surface": "#101415",
-                        "on-surface-variant": "#c0c7d1"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-max": "1280px",
-                        "gutter": "24px",
-                        "margin-desktop": "64px",
-                        "base": "8px",
-                        "margin-mobile": "16px"
-                    },
-                    "fontFamily": {
-                        "headline-lg": ["Inter"],
-                        "headline-xl": ["Inter"],
-                        "display-lg-mobile": ["Inter"],
-                        "label-md": ["Inter"],
-                        "display-lg": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
+<link rel="stylesheet" href="xcale.css"/>
 <style>
         body {
-            background-color: #0A0F1E;
             color: #e0e3e5;
             -webkit-font-smoothing: antialiased;
         }
@@ -111,7 +23,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .glass-panel {
-            background: linear-gradient(135deg, rgba(30, 125, 184, 0.05) 0%, rgba(10, 15, 30, 0) 100%);
+            background: linear-gradient(135deg, rgba(30, 125, 184, 0.05) 0%, rgba(16, 20, 21, 0) 100%);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .glow-hover:hover {
@@ -134,7 +46,7 @@
         #mobile-menu:not(.hidden) > div:first-child { animation: xcMenuFade 0.25s ease; }
         html, body { overflow-x: hidden; max-width: 100%; }
     </style>
-<link href="xcale_logo.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
 </head>
 <body class="min-h-screen flex flex-col relative overflow-x-hidden">
 <!-- Background Grid -->
@@ -146,32 +58,32 @@
 <nav class="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-md shadow-sm border-b border-outline-variant/10">
 <div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
 <a class="flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-300" href="index.html">
-<img alt="Xcale Agency" class="h-10 w-auto" src="xcale_logo_cropped.png"/>
+<img alt="Xcale Agency" class="h-10 w-auto" loading="eager" fetchpriority="high" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
 </a>
 <div class="hidden md:flex gap-gutter items-center font-label-md text-label-md uppercase tracking-wider">
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
 <div class="relative group">
 <button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity duration-300 uppercase tracking-wider">Servicios
-<span class="material-symbols-outlined text-lg">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-lg">expand_more</span>
 </button>
 <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block z-50">
-<div class="w-72 bg-[#111827] border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
-<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
+<div class="w-72 bg-surface-container-high border border-outline-variant/30 rounded-xl p-2 shadow-2xl flex flex-col normal-case tracking-normal">
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="desarrollo-software.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">code</span>Software a Medida</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="chatbots.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="landing-pages.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="automatizacion.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="consultoria-ai.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-2.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 text-sm font-semibold" href="data-analytics.html"><span aria-hidden="true" class="material-symbols-outlined text-primary text-xl">insights</span>Data Analytics &amp; BI</a>
 </div>
 </div>
 </div>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html#contacto">Contacto</a>
 </div>
 <button class="hidden md:flex bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:opacity-80 transition-opacity duration-300">
-                Get Started
+                Empezar
             </button>
-<button aria-label="Abrir menú" class="md:hidden flex items-center text-on-surface" onclick="toggleMobileMenu()">
-<span class="material-symbols-outlined text-3xl">menu</span>
+<button aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden flex items-center text-on-surface" onclick="toggleMobileMenu()">
+<span aria-hidden="true" class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </nav>
@@ -182,8 +94,8 @@
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
 <div class="md:col-span-7 z-10">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 border border-primary/30 mb-6">
-<span class="material-symbols-outlined text-primary text-sm">memory</span>
-<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Strategic Intelligence</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-sm">memory</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Inteligencia Estratégica</span>
 </div>
 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
                         Implementación y <br/><span class="text-gradient">Consultoría AI</span>
@@ -200,7 +112,7 @@
 <div class="md:col-span-5 relative mt-12 md:mt-0">
 <div class="relative w-full aspect-square rounded-full overflow-hidden border border-outline-variant/20 shadow-[0_0_50px_rgba(30,125,184,0.15)] flex items-center justify-center glass-panel">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,125,184,0.2)_0%,transparent_70%)]"></div>
-<span class="material-symbols-outlined text-[120px] text-primary opacity-80" style="font-variation-settings: 'FILL' 0, 'wght' 200;">model_training</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[120px] text-primary opacity-80" style="font-variation-settings: 'FILL' 0, 'wght' 200;">model_training</span>
 </div>
 </div>
 </div>
@@ -216,7 +128,7 @@
 <div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
 <div class="w-12 h-12 rounded-lg bg-[#080C14] border border-outline-variant/30 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary">analytics</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">analytics</span>
 </div>
 <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3 text-xl">AI Readiness</h3>
 <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Auditoría profunda de su infraestructura de datos y procesos actuales para determinar la viabilidad y el ROI potencial de la implementación de IA.</p>
@@ -225,7 +137,7 @@
 <div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
 <div class="w-12 h-12 rounded-lg bg-[#080C14] border border-outline-variant/30 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary">route</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">route</span>
 </div>
 <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3 text-xl">Strategic Roadmap</h3>
 <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Diseño de una hoja de ruta tecnológica secuencial, alineando los objetivos de negocio con las capacidades de machine learning a corto y largo plazo.</p>
@@ -234,7 +146,7 @@
 <div class="glass-card rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
 <div class="w-12 h-12 rounded-lg bg-[#080C14] border border-outline-variant/30 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary">science</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary">science</span>
 </div>
 <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3 text-xl">Proof of Concept (PoC)</h3>
 <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Desarrollo ágil de prototipos funcionales para validar hipótesis de valor antes de comprometer recursos en un despliegue a gran escala.</p>
@@ -251,7 +163,7 @@
 <!-- Block 1 -->
 <div class="flex gap-6 items-start p-6 glass-panel rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors">
 <div class="mt-1">
-<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">network_node</span>
+<span aria-hidden="true" class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">network_node</span>
 </div>
 <div>
 <h4 class="font-headline-lg text-headline-lg text-on-surface text-xl mb-2">Machine Learning Predictivo</h4>
@@ -261,7 +173,7 @@
 <!-- Block 2 -->
 <div class="flex gap-6 items-start p-6 glass-panel rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors">
 <div class="mt-1">
-<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">visibility</span>
+<span aria-hidden="true" class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">visibility</span>
 </div>
 <div>
 <h4 class="font-headline-lg text-headline-lg text-on-surface text-xl mb-2">Computer Vision</h4>
@@ -271,7 +183,7 @@
 <!-- Block 3 -->
 <div class="flex gap-6 items-start p-6 glass-panel rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-colors md:col-span-2">
 <div class="mt-1">
-<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">auto_awesome</span>
+<span aria-hidden="true" class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'wght' 300;">auto_awesome</span>
 </div>
 <div>
 <h4 class="font-headline-lg text-headline-lg text-on-surface text-xl mb-2">Generative AI &amp; LLMs</h4>
@@ -284,7 +196,7 @@
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-[120px]">
 <div class="glass-card rounded-xl p-8 md:p-12 border-l-4 border-l-primary/50 flex flex-col md:flex-row gap-8 items-center">
 <div class="flex-shrink-0 w-24 h-24 rounded-full bg-[#080C14] border border-outline-variant/30 flex items-center justify-center shadow-inner">
-<span class="material-symbols-outlined text-5xl text-primary opacity-80" style="font-variation-settings: 'wght' 200;">shield_lock</span>
+<span aria-hidden="true" class="material-symbols-outlined text-5xl text-primary opacity-80" style="font-variation-settings: 'wght' 200;">shield_lock</span>
 </div>
 <div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-3 text-2xl">Ética, Sesgo y Seguridad</h2>
@@ -310,13 +222,13 @@
 <footer class="bg-surface-container-lowest w-full py-20 border-t border-outline-variant/10">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
 <div class="md:col-span-1">
-<img alt="Xcale Agency" class="h-12 w-auto mb-4 self-start object-contain" src="xcale_logo_cropped.png"/>
+<img alt="Xcale Agency" class="h-12 w-auto mb-4 self-start object-contain" loading="lazy" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
 <p class="font-body-md text-body-md text-on-surface-variant mt-4 text-sm max-w-xs">
-                    © 2025 Xcale Agency. All rights reserved. Precision engineered AI solutions.
+                    © 2025 Xcale Agency. Todos los derechos reservados. Soluciones de IA con ingeniería de precisión.
                 </p>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Navigation</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Navegación</h4>
 <ul class="space-y-2">
 <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary cursor-pointer" href="#">Servicios</a></li>
 <li><a class="font-body-md text-body-md text-primary font-bold cursor-pointer hover:text-primary transition-colors duration-200" href="#">IA &amp; Consultoría</a></li>
@@ -327,18 +239,18 @@
 <div>
 <h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Legal</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary cursor-pointer" href="#">Privacy Policy</a></li>
-<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary cursor-pointer" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary cursor-pointer" href="#">Política de Privacidad</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 hover:text-primary cursor-pointer" href="#">Términos del Servicio</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Connect</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Conectar</h4>
 <div class="flex gap-4">
 <div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-on-surface-variant">
-<span class="material-symbols-outlined text-sm">link</span>
+<span aria-hidden="true" class="material-symbols-outlined text-sm">link</span>
 </div>
 <div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-on-surface-variant">
-<span class="material-symbols-outlined text-sm">mail</span>
+<span aria-hidden="true" class="material-symbols-outlined text-sm">mail</span>
 </div>
 </div>
 </div>
@@ -347,26 +259,26 @@
 <!-- Mobile Menu Overlay -->
 <div class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-menu">
 <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
-<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-[#0b0f10] border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
+<div class="absolute top-0 right-0 h-full w-80 max-w-[85%] bg-surface-container-lowest border-l border-outline-variant/20 shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto">
 <div class="flex items-center justify-between mb-4">
-<img alt="Xcale Agency" class="h-9 w-auto" src="xcale_logo_cropped.png"/>
-<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+<img alt="Xcale Agency" class="h-9 w-auto" loading="lazy" decoding="async" width="300" height="224" src="xcale-logo.webp"/>
+<button aria-label="Cerrar menú" class="text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()"><span aria-hidden="true" class="material-symbols-outlined text-3xl">close</span></button>
 </div>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span class="material-symbols-outlined text-primary">home</span>Inicio</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="index.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">home</span>Inicio</a>
 <p class="px-4 pt-4 pb-1 font-label-md text-label-md uppercase tracking-wider text-outline">Servicios</p>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
-<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
-<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span class="material-symbols-outlined">mail</span>Contacto</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="desarrollo-software.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">code</span>Software a Medida</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="chatbots.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">smart_toy</span>ChatBots Inteligentes</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="landing-pages.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">trending_up</span>Landing Pages &amp; Web</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="automatizacion.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">tune</span>Automatización &amp; Diagnóstico</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-primary transition-colors flex items-center gap-3 font-semibold" href="consultoria-ai.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">model_training</span>IA &amp; Consultoría</a>
+<a class="px-4 py-3 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3 font-semibold" href="data-analytics.html"><span aria-hidden="true" class="material-symbols-outlined text-primary">insights</span>Data Analytics &amp; BI</a>
+<a class="mt-4 px-4 py-3 rounded-lg bg-primary text-on-primary text-center font-semibold flex items-center justify-center gap-2" href="index.html#contacto"><span aria-hidden="true" class="material-symbols-outlined">mail</span>Contacto</a>
 </div>
 </div>
 <script>
         function toggleMobileMenu(){
             var m=document.getElementById('mobile-menu');
-            if(m){ m.classList.toggle('hidden'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
+            if(m){ m.classList.toggle('hidden'); var _open = !m.classList.contains('hidden'); document.body.style.overflow = _open ? 'hidden' : ''; document.querySelectorAll('[aria-controls="mobile-menu"]').forEach(function(b){ b.setAttribute('aria-expanded', _open); }); }
         }
 </script>
 </body></html>

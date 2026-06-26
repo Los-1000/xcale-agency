@@ -1,0 +1,7 @@
+node_modules/
+npm-debug.log*
+
+# Assets originales sin optimizar (reemplazados por xcale-logo.* / favicon.png)
+# (se conservan en el historial de git; descomenta si quieres dejar de versionarlos)
+# xcale_logo.png
+# xcale_logo_cropped.png

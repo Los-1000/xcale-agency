@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo y color base del documento desde tokens (fuente única de verdad).
+   Garantiza fondo oscuro en las 7 páginas sin depender de clases por página. */
+body {
+  @apply bg-background text-on-surface;
+  font-family: "Hanken Grotesk", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   Capa "quieter" — atenúa las señales de estética generada por IA.
+   Usa !important para sobreescribir los <style> inline de cada página
+   sin tener que editar las 7 por separado. Tono: cercano + confiable.
+   ============================================================ */
+
+/* Texto en degradado -> color sólido (más calmado, sigue con acento de marca) */
+.gradient-text,
+.text-gradient,
+.tech-gradient-text {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: #9fd0ff !important;
+  color: #9fd0ff !important;
+}
+
+/* Resplandor de texto -> sin sombra luminosa */
+.text-glow {
+  text-shadow: none !important;
+}
+
+/* Glassmorphism -> superficies sólidas con elevación sutil (también mejora rendimiento).
+   El blur con propósito (navbar sobre contenido al hacer scroll) se conserva aparte. */
+.glass-panel,
+.glass-card {
+  background: rgba(29, 32, 34, 0.94) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: rgba(255, 255, 255, 0.07) !important;
+  box-shadow: none !important;
+}
+
+/* Borde "milled" decorativo -> borde simple y discreto */
+.milled-edge {
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+/* Indicador de foco visible y de alto contraste para teclado (WCAG 2.4.7).
+   Solo se muestra en navegación por teclado, no al hacer click. */
+:focus-visible {
+  outline: 2px solid #92ccff;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema operativo (WCAG 2.3.3).
+   Neutraliza pulsos, transiciones y scroll animado para usuarios sensibles. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

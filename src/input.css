@@ -70,3 +70,10 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Enlaces de pie de página: área táctil más cómoda en móvil sin inflar el footer
+   (WCAG 2.5.5 Target Size). El logo del footer no es un enlace, así no se ve afectado. */
+footer a {
+  display: inline-block;
+  padding-block: 0.375rem;
+}

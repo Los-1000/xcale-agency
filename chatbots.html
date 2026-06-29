@@ -14,24 +14,6 @@
 <link rel="stylesheet" href="xcale.css?v=2"/>
 <style>
         body { } /* Dark Navy Base */
-        .glass-panel {
-            background: rgba(17, 24, 39, 0.6); /* Dark Blue-Grey */
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-        .text-glow { text-shadow: 0 0 20px rgba(146, 204, 255, 0.3); }
-        .gradient-text {
-            background: linear-gradient(135deg, #92ccff 0%, #1e7db8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .milled-edge {
-            border: 1px solid transparent;
-            background-image: linear-gradient(#111827, #111827), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
-        }
             @keyframes xcMenuSlide { from { transform: translateX(100%); } to { transform: translateX(0); } }
         @keyframes xcMenuFade { from { opacity: 0; } to { opacity: 1; } }
         #mobile-menu:not(.hidden) > div:last-child { animation: xcMenuSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1); }

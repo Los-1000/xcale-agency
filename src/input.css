@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Paleta — fuente única de verdad (refleja los tokens MD3 de
+   tailwind.config.js). Los <style> por página referencian estas
+   variables en lugar de repetir el valor hex.
+   ============================================================ */
+:root {
+  --xc-bg: #101415;                         /* background */
+  --xc-on: #e0e3e5;                         /* on-background */
+  --xc-primary: #1e7db8;                    /* primary-container / acción + glow */
+  --xc-accent: #92ccff;                     /* inverse-primary / acento claro */
+  --xc-panel: rgba(29, 32, 34, 0.94);       /* superficie sólida (ex-glass) */
+  --xc-hairline: rgba(255, 255, 255, 0.07); /* borde sutil */
+}
+
 /* Fondo y color base del documento desde tokens (fuente única de verdad).
    Garantiza fondo oscuro en las 7 páginas sin depender de clases por página. */
 body {
@@ -12,50 +26,58 @@ body {
 }
 
 /* ============================================================
-   Capa "quieter" — atenúa las señales de estética generada por IA.
-   Usa !important para sobreescribir los <style> inline de cada página
-   sin tener que editar las 7 por separado. Tono: cercano + confiable.
+   Capa canónica de componentes — define la apariencia "cercana
+   y confiable", atenuando las señales de estética generada por IA.
+   Antes era un override con !important sobre los <style> por página;
+   ahora esos <style> ya no definen estos efectos, así que la capa
+   gana por orden de cascada (va después de @tailwind utilities) y
+   NO necesita !important. Tono: cercano + confiable.
    ============================================================ */
 
-/* Texto en degradado -> color sólido (más calmado, sigue con acento de marca) */
+/* Texto en degradado -> color sólido de acento (calmado, con marca) */
 .gradient-text,
 .text-gradient,
 .tech-gradient-text {
-  background: none !important;
-  -webkit-background-clip: border-box !important;
-  background-clip: border-box !important;
-  -webkit-text-fill-color: #9fd0ff !important;
-  color: #9fd0ff !important;
+  -webkit-text-fill-color: var(--xc-accent);
+  color: var(--xc-accent);
 }
 
 /* Resplandor de texto -> sin sombra luminosa */
 .text-glow {
-  text-shadow: none !important;
+  text-shadow: none;
 }
 
-/* Glassmorphism -> superficies sólidas con elevación sutil (también mejora rendimiento).
-   El blur con propósito (navbar sobre contenido al hacer scroll) se conserva aparte. */
+/* Glassmorphism -> superficies sólidas con borde sutil (también mejora
+   rendimiento). El blur con propósito (navbar al hacer scroll) vive aparte
+   como .glass-nav y no se ve afectado. */
 .glass-panel,
 .glass-card {
-  background: rgba(29, 32, 34, 0.94) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-color: rgba(255, 255, 255, 0.07) !important;
-  box-shadow: none !important;
+  background: var(--xc-panel);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid var(--xc-hairline);
+  box-shadow: none;
 }
 
 /* Borde "milled" decorativo -> borde simple y discreto */
 .milled-edge {
-  background-image: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  background-image: none;
+  border: 1px solid var(--xc-hairline);
 }
 
 /* Indicador de foco visible y de alto contraste para teclado (WCAG 2.4.7).
    Solo se muestra en navegación por teclado, no al hacer click. */
 :focus-visible {
-  outline: 2px solid #92ccff;
+  outline: 2px solid var(--xc-accent);
   outline-offset: 2px;
   border-radius: 0.25rem;
+}
+
+/* Enlaces de pie de página: área táctil más cómoda en móvil sin inflar el footer
+   (WCAG 2.5.5 Target Size). El logo del footer no es un enlace, así no se ve afectado. */
+footer a {
+  display: inline-block;
+  padding-block: 0.375rem;
 }
 
 /* Respeta la preferencia de movimiento reducido del sistema operativo (WCAG 2.3.3).
@@ -69,11 +91,4 @@ body {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* Enlaces de pie de página: área táctil más cómoda en móvil sin inflar el footer
-   (WCAG 2.5.5 Target Size). El logo del footer no es un enlace, así no se ve afectado. */
-footer a {
-  display: inline-block;
-  padding-block: 0.375rem;
 }

@@ -48,7 +48,7 @@ module.exports = {
         "surface-bright": "#363a3b",
         "tertiary-fixed-dim": "#ffb962",
         "on-tertiary-fixed-variant": "#663e00",
-        "primary-container": "#1e7db8",
+        "primary-container": "#1a73ac",
         "error": "#ffb4ab",
         "on-surface": "#e0e3e5",
         "outline-variant": "#404850",

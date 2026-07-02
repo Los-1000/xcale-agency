@@ -10,7 +10,7 @@
 :root {
   --xc-bg: #101415;                         /* background */
   --xc-on: #e0e3e5;                         /* on-background */
-  --xc-primary: #1e7db8;                    /* primary-container / acción + glow */
+  --xc-primary: #1a73ac;                    /* primary-container / acción + glow (contraste AA: blanco 5.13:1) */
   --xc-accent: #92ccff;                     /* inverse-primary / acento claro */
   --xc-panel: rgba(29, 32, 34, 0.94);       /* superficie sólida (ex-glass) */
   --xc-hairline: rgba(255, 255, 255, 0.07); /* borde sutil */

@@ -41,6 +41,27 @@
         }
     </style>
 <link href="favicon.png" rel="icon" type="image/png"/>
+<!-- Calendly (popup para botones de agenda) -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+(function(){
+  var CAL = 'https://calendly.com/contacto-xcale/30min';
+  // Delegación: cualquier enlace con [data-calendly] o cuyo texto sea
+  // "Agendar…", "Agenda…", "Empezar" o "Solicitar demo" abre el popup.
+  // Si el widget aún no cargó, el href original (#contacto) actúa de respaldo.
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    var txt = (a.textContent || '').toLowerCase();
+    var match = a.hasAttribute('data-calendly') || /\bagenda(r)?\b|\bempezar\b|solicitar\s+demo/.test(txt);
+    if (match && window.Calendly) {
+      e.preventDefault();
+      window.Calendly.initPopupWidget({ url: CAL });
+    }
+  });
+})();
+</script>
 </head>
 <body class="text-on-background antialiased selection:bg-primary-container selection:text-white">
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[70] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Saltar al contenido</a>

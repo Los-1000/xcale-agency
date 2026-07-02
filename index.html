@@ -28,6 +28,27 @@
         html, body { overflow-x: hidden; max-width: 100%; }
     </style>
 <link href="favicon.png" rel="icon" type="image/png"/>
+<!-- Calendly (popup para botones de agenda) -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+(function(){
+  var CAL = 'https://calendly.com/contacto-xcale/30min';
+  // Delegación: cualquier enlace con [data-calendly] o cuyo texto sea
+  // "Agendar…", "Agenda…", "Empezar" o "Solicitar demo" abre el popup.
+  // Si el widget aún no cargó, el href original (#contacto) actúa de respaldo.
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    var txt = (a.textContent || '').toLowerCase();
+    var match = a.hasAttribute('data-calendly') || /\bagenda(r)?\b|\bempezar\b|solicitar\s+demo/.test(txt);
+    if (match && window.Calendly) {
+      e.preventDefault();
+      window.Calendly.initPopupWidget({ url: CAL });
+    }
+  });
+})();
+</script>
 </head>
 <body class="text-on-surface bg-background antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
@@ -287,15 +308,100 @@
 <!-- CTA / Contacto -->
 <section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden" id="contacto">
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
-<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10 glass-panel milled-edge rounded-2xl p-12">
+<div class="max-w-4xl mx-auto text-center space-y-8 relative z-10 glass-panel milled-edge rounded-2xl p-8 md:p-12">
 <h2 class="font-headline-xl text-headline-xl text-on-surface">¿Listo para escalar su operación?</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
                 Hablemos sobre su caso de uso. Analizamos su situación actual y diseñamos una solución estratégica a medida — desde el primer prototipo hasta el despliegue a escala.
             </p>
-<a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-10 py-5 rounded-lg transition duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)] mt-4" href="mailto:hola@xcale.agency">
-                Iniciar Consultoría Gratuita
-                <span aria-hidden="true" class="material-symbols-outlined">calendar_month</span>
+<style>
+        .xc-field{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:0.65rem;padding:0.7rem 0.9rem;color:#e6edf3;font-family:inherit;font-size:0.95rem;transition:border-color .2s,box-shadow .2s}
+        .xc-field::placeholder{color:rgba(230,237,243,0.4)}
+        .xc-field:focus{outline:none;border-color:#92ccff;box-shadow:0 0 0 3px rgba(146,204,255,0.18)}
+        .xc-label{display:block;text-align:left;font-size:0.78rem;letter-spacing:.02em;color:#b9c2cc;margin-bottom:0.3rem}
+        .xc-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+    </style>
+<div class="grid md:grid-cols-2 gap-8 md:gap-10 items-start text-left mt-4">
+<!-- Camino A: agendar llamada (Calendly) -->
+<div class="flex flex-col gap-4 md:pr-8 md:border-r border-outline-variant/20">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Agenda una llamada de 30&nbsp;min</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Elige el horario que te acomode y hablamos directo de tu caso. Sin costo y sin compromiso.</p>
+<a data-calendly class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition duration-300 shadow-[0_0_20px_rgba(146,204,255,0.2)] hover:shadow-[0_0_30px_rgba(146,204,255,0.4)] cursor-pointer" href="#contacto">
+                    Agendar ahora
+                    <span aria-hidden="true" class="material-symbols-outlined">calendar_month</span>
 </a>
+</div>
+<!-- Camino B: dejar datos (formulario -> Google Sheets) -->
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">¿Prefieres que te contactemos?</h3>
+<form id="lead-form" novalidate class="flex flex-col gap-3">
+<div>
+<label class="xc-label" for="lf-nombre">Nombre*</label>
+<input class="xc-field" id="lf-nombre" name="nombre" type="text" required autocomplete="name" placeholder="Tu nombre"/>
+</div>
+<div>
+<label class="xc-label" for="lf-email">Email*</label>
+<input class="xc-field" id="lf-email" name="email" type="email" required autocomplete="email" placeholder="tu@correo.com"/>
+</div>
+<div>
+<label class="xc-label" for="lf-whatsapp">WhatsApp</label>
+<input class="xc-field" id="lf-whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="+52 55 1234 5678"/>
+</div>
+<div>
+<label class="xc-label" for="lf-empresa">Empresa <span class="text-on-surface-variant">(opcional)</span></label>
+<input class="xc-field" id="lf-empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nombre de tu empresa"/>
+</div>
+<div>
+<label class="xc-label" for="lf-mensaje">¿Qué necesitas?</label>
+<textarea class="xc-field" id="lf-mensaje" name="mensaje" rows="3" placeholder="Cuéntanos brevemente tu proyecto"></textarea>
+</div>
+<input class="xc-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+<input type="hidden" name="origen" value="index.html"/>
+<button type="submit" class="mt-1 inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-lg transition duration-300">
+                        Enviar mis datos
+                        <span aria-hidden="true" class="material-symbols-outlined">send</span>
+</button>
+<p id="lead-status" role="status" aria-live="polite" class="font-body-md text-body-md min-h-[1.25rem]"></p>
+</form>
+</div>
+</div>
+<script>
+        // URL del Apps Script (Aplicación web) que guarda los leads en Google Sheets.
+        // Si redespliegas creando una implementación NUEVA, la URL cambia: pégala aquí.  // ← PEGA AQUÍ
+        window.LEADS_ENDPOINT = 'https://script.google.com/a/macros/xcale.lat/s/AKfycbzzwCIv9MGLMDbACQlGDJ7qbnKYdC451J43zZugUr4lK13CnK4H0FbcSXb0n93FgbaS/exec';
+        (function(){
+            var form = document.getElementById('lead-form');
+            if(!form) return;
+            var status = document.getElementById('lead-status');
+            var origen = form.querySelector('input[name="origen"]');
+            if(origen){ origen.value = (location.pathname.split('/').pop() || 'index.html'); }
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                if(form.website && form.website.value){ return; } // honeypot: bot detectado
+                var btn = form.querySelector('button[type="submit"]');
+                var label = btn ? btn.innerHTML : '';
+                if(btn){ btn.disabled = true; btn.textContent = 'Enviando…'; }
+                status.style.color = '';
+                status.textContent = '';
+
+                var endpoint = window.LEADS_ENDPOINT || '';
+                var data = new URLSearchParams(new FormData(form));
+                fetch(endpoint, { method:'POST', mode:'no-cors', body: data })
+                    .then(function(){
+                        form.reset();
+                        status.style.color = '#92ccff';
+                        status.textContent = '¡Gracias! Recibimos tus datos. Te contactamos muy pronto.';
+                    })
+                    .catch(function(){
+                        status.style.color = '#ffb4ab';
+                        status.textContent = 'No se pudo enviar. Escríbenos a hola@xcale.agency o inténtalo de nuevo.';
+                    })
+                    .then(function(){
+                        if(btn){ btn.disabled = false; btn.innerHTML = label; }
+                    });
+            });
+        })();
+</script>
 </div>
 </section>
 </main>
